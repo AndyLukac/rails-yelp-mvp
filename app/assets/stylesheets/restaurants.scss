@@ -1,0 +1,25 @@
+// Place all the styles related to the restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.btn a {
+  color: white !important;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.restaurants {
+  width: 50%;
+}
+
+.review a {
+  font-size: 14px;
+}

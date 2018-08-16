@@ -1,1 +1,25 @@
-_form.html.erb
+<div class="container">
+<%= simple_form_for (restaurant) do |f| %>
+<h3> Create new restaurant</h3>
+  <% if @restaurant.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @restaurant.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+  <%= f.input :name, label: 'Name of your restaurant please', error: 'Restaurant name is mandatory, please specify one', class: 'form-control'%>
+  </div>
+  <div class="form-group">
+  <%= f.input :address, placeholder: 'Physical address of your restaurant', error: 'Address is mandatory, please specify one', class: 'form-control'%>
+  </div>
+  <div class="form-group">
+  <%= f.input :category, label: 'Category', error: 'Neptunian is not a valid category', class: 'form-control'%>
+  </div>
+  <%= f.button :submit, class: 'btn btn-primary'%>
+<% end %>
+</div>
+
